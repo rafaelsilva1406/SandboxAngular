@@ -1,0 +1,55 @@
+<form name="addDryMatterForm" role="form" novalidate>
+	<fieldset>
+		<legend>{{'DRYMATTERFORMEDITLEGEND' | translate }}</legend>
+		<div class="form-group" data-ng-class="{'has-error':addDryMatterForm.lotid.$touched && addDryMatterForm.lotid.$invalid}">
+			<label for="lotid">{{'DRYMATTERFORMEDITLABELLOTID' | translate }}</label>
+			<input type="text" class="form-control" id="lotid" name="lotid" placeholder="{{lotId}}" data-ng-model="user.lotid" disabled="disabled" />
+			<div data-ng-messages="addDryMatterForm.lotid.$error" data-ng-show="addDryMatterForm.lotid.$touched" role="alert" class="bg-danger">
+				<div data-ng-messages-include="formErrorMessages"></div>
+			</div>
+		</div>
+		<div class="form-group" data-ng-class="{'has-error':addDryMatterForm.sequence.$touched && addDryMatterForm.sequence.$invalid}">
+			<label for="sequence">{{'DRYMATTERFORMEDITLABELSEQUENCE' | translate }}</label>
+			<input type="text" class="form-control" id="sequence" name="sequence" placeholder="{{sequence}}" data-ng-model="user.sequence" disabled="disabled" />
+			<div data-ng-messages="addDryMatterForm.sequence.$error" data-ng-show="addDryMatterForm.sequence.$touched" role="alert" class="bg-danger">
+				<div data-ng-messages-include="formErrorMessages"></div>
+			</div>
+		</div>
+		<div class="form-group" data-ng-class="{'has-error':addDryMatterForm.weightunit.$touched && addDryMatterForm.weightunit.$invalid}">
+			<label for="weightunit">{{'DRYMATTERFORMEDITLABELWEIGHTUNIT' | translate }}</label>
+			<select class="form-control" data-ng-model="weightunitSelected" name="weightunit" disabled="disabled"></select>
+			<div data-ng-messages="addDryMatterForm.weightunit.$error" data-ng-show="addDryMatterForm.weightunit.$touched" role="alert" class="bg-danger">
+				<div data-ng-messages-include="formErrorMessages"></div>
+			</div>
+		</div>
+		<div class="form-group" data-ng-class="{ 'has-error': addDryMatterForm.fruitweight.$touched && addDryMatterForm.fruitweight.$invalid }">
+			<label for="fruitweight">{{'DRYMATTERFORMEDITLABELFRUITWEIGHT' | translate }}</label>
+			<input type="text" class="form-control" id="fruitweight" name="fruitweight" placeholder="{{fruitWeight}}" data-ng-model="user.fruitweight" data-ng-minlength="3" data-ng-maxlength="10" data-ng-pattern="/^[a-zA-Z0-9]*$/" required />
+			<div data-ng-messages="addDryMatterForm.fruitweight.$error" data-ng-show="addDryMatterForm.fruitweight.$touched" role="alert" class="bg-danger">
+				<div data-ng-messages-include="formErrorMessages"></div>
+			</div>
+		</div>
+		<div class="form-group" data-ng-class="{ 'has-error': addDryMatterForm.paperweight.$touched && addDryMatterForm.paperweight.$invalid }">
+			<label for="paperweight">{{'DRYMATTERFORMEDITLABELPAPERWEIGHT' | translate }}</label>
+			<input type="text" class="form-control" id="paperweight" name="paperweight" placeholder="{{paperWeight}}" data-ng-model="user.paperweight" data-ng-minlength="3" data-ng-maxlength="10" data-ng-pattern="/^[a-zA-Z0-9]*$/" required />
+			<div data-ng-messages="addDryMatterForm.paperweight.$error" data-ng-show="addDryMatterForm.paperweight.$touched" role="alert" class="bg-danger">
+				<div data-ng-messages-include="formErrorMessages"></div>
+			</div>
+		</div>
+		<div class="form-group" data-ng-class="{ 'has-error': addDryMatterForm.wetweight.$touched && addDryMatterForm.wetweight.$invalid }">
+			<label for="wetweight">{{'DRYMATTERFORMEDITLABELWETWEIGHT' | translate }}</label>
+			<input type="text" class="form-control" id="wetweight" name="wetweight" placeholder="{{wetWeight}}" data-ng-model="user.wetweight" data-ng-minlength="3" data-ng-maxlength="10" data-ng-pattern="/^[a-zA-Z0-9]*$/" required />
+			<div data-ng-messages="addDryMatterForm.wetweight.$error" data-ng-show="addDryMatterForm.wetweight.$touched" role="alert" class="bg-danger">
+				<div data-ng-messages-include="formErrorMessages"></div>
+			</div>
+		</div>
+		<div class="form-group" data-ng-class="{ 'has-error': addDryMatterForm.dryweight.$touched && addDryMatterForm.dryweight.$invalid }">
+			<label for="dryweight">{{'DRYMATTERFORMEDITLABELDRYWEIGHT' | translate }}</label>
+			<input type="text" class="form-control" id="dryweight" name="dryweight" placeholder="{{wetWeight}}" data-ng-model="user.dryweight" data-ng-minlength="3" data-ng-maxlength="10" data-ng-pattern="/^[a-zA-Z0-9]*$/" required />
+			<div data-ng-messages="addDryMatterForm.dryweight.$error" data-ng-show="addDryMatterForm.dryweight.$touched" role="alert" class="bg-danger">
+				<div data-ng-messages-include="formErrorMessages"></div>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary btn-lg btn-block" data-ng-click="submit(user)" data-ng-disabled="!lotInspectionCompleteForm.$valid">{{'DRYMATTERFORMEDITBUTTONSUBMIT' | translate }}</button>
+	</fieldset>
+</form>

@@ -1,0 +1,18 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="modal-body">
+				<div data-ng-include="'js/app/qa/rowDetails.html'"></div>
+				<div class="list-group">
+				  <a data-ng-href="#/binsForLot" data-ng-click="cancel()" class="list-group-item">{{'LOTINSPECTIONMODALBINFORLOT' | translate }}<span class="glyphicon glyphicon-menu-right pull-right" aria-hidden="true"></span></a>
+				  <a data-ng-href="#/dryMatter" data-ng-click="cancel()" class="list-group-item">{{'LOTINSPECTIONMODALDRYMATTER' | translate }}<span class="glyphicon glyphicon-menu-right pull-right" aria-hidden="true"></span></a>
+				  <button type="button" class="list-group-item" data-ng-click="imageModal()">{{'LOTINSPECTIONMODALUPLOADIMAGE' | translate }}<span class="glyphicon glyphicon-menu-right pull-right" aria-hidden="true"></span></button>
+				  <button type="button" class="list-group-item" data-ng-click="completeInspectionModal()">{{'LOTINSPECTIONMODALCOMPLETEINSPECION' | translate }}<span class="glyphicon glyphicon-menu-right pull-right" aria-hidden="true"></span></button>
+				</div>
+			</div>
+			<div class="modal-footer">
+				 <button type="button" class="btn btn-default btn-lg btn-block" data-ng-click="cancel()" aria-label="close">{{'LOTINSPECTIONMODALCANCEL' | translate }}</button>
+			</div>
+		</div>
+	</div>
+</div>

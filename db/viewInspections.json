@@ -1,0 +1,16 @@
+{
+	"data":[
+		{
+			"SEQUENCE":"1",
+			"WEIGHT":"24.00",
+			"GRADE":"14",
+			"COLOR":"4"
+		},
+		{
+			"SEQUENCE":"2",
+			"WEIGHT":"27.00",
+			"GRADE":"17",
+			"COLOR":"7"
+		}
+	]
+}

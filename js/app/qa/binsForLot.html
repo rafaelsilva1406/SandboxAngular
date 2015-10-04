@@ -1,0 +1,48 @@
+<div class="row well scrollY">
+  		<div class="col-sm-6 col-md-6 col-lg-6">
+  			<div data-ng-include="'js/app/qa/rowDetails.html'"></div>
+  		</div>
+  		<div class="col-sm-6 col-md-6 col-lg-6">
+  			<div class="panel panel-default boxShadow">
+			  <div class="panel-heading">
+			  	<h3 class="panel-title">{{'BINSFORLOTPANELHEADINGBINSLIST' | translate }}</h3>
+			  </div>
+			  <div class="panel-body">
+				    <div class="table-responsive">
+						<table class="table table-striped table-bordered table-hover" data-order='[[1,"asc"]]' data-page-length="10" id="binsForLotTable"></table>
+					</div>
+			  </div>
+			</div>
+  		</div>
+  		<div class="col-sm-6 col-md-6 col-lg-6">
+			<div class="panel panel-default boxShadow">
+			  <div class="panel-heading">
+			  	<h3 class="panel-title">{{'BINSFORLOTPANELHEADINGINSPECTIONLIST' | translate }}</h3>
+			  </div>
+			  <div class="panel-body">
+			  	<div class="table-responsive">
+					<table class="table table-striped table-bordered table-hover" data-order='[[ 1, "asc" ]]' data-page-length='10' id="inspectionTables"></table>
+				</div>
+			  </div>
+			</div>
+  		</div>
+  		<div class="col-sm-6 col-md-6 col-lg-6">
+			<div class="panel panel-default boxShadow">
+				<div class="panel-heading">
+					<h3 class="panel-title">{{'BINSFORLOTFORMS' | translate }}</h3>
+				</div>
+				<div class="panel-body">
+					<accordion close-others="oneAtATime">
+						<accordion-group is-open="true">
+							<accordion-heading>
+								{{'BINSFORLOTINSPECTLOTFORMTITLE' | translate }}
+								<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+							</accordion-heading>
+							<div data-ng-include="'js/app/qa/inspectLotForm.html'"></div>
+						</accordion-group>
+					</accordion>
+				</div>
+			</div>
+  		</div>
+</div>
+<div dashboard="dashboardOptions" class="well"></div>

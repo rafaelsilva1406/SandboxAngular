@@ -1,0 +1,18 @@
+{
+	"data": [
+		{
+		    "DATE": "02-27-2015",
+		    "GROWERID": "000001",
+		    "GROWERNAME": "TEST",
+		    "LOTID": "700000",
+		    "BINCOUNT": "1"
+		},
+		{
+		    "DATE": "02-28-2015",
+		    "GROWERID": "000002",
+		    "GROWERNAME": "TEST",
+		    "LOTID": "700001",
+		    "BINCOUNT": "1"
+		}
+	]
+}

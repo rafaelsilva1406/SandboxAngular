@@ -1,0 +1,29 @@
+<form name="InspectLotForm" role="form" novalidate>
+	<fieldset>
+		<legend>{{'BINSFORLOTINSPECTLOTMODALFORMLEGEND' | translate }}</legend>
+		<div class="form-group" data-ng-class="{'has-error':InspectLotForm.lotid.$touched && InspectLotForm.lotid.$invalid}">
+			<label for="lotid">{{'BINSFORLOTINSPECTLOTMODALFORMLABELLOTID' | translate }}</label>
+			<input type="text" class="form-control" id="lotid" name="lotid" data-ng-model="user.lotid" disabled="disabled" />
+		</div>
+		<div class="form-group" data-ng-class="{ 'has-error':InspectLotForm.weight.$touched && InspectLotForm.weight.$invalid }">
+			<label for="weight">{{'BINSFORLOTINSPECTLOTMODALFORMLABELWEIGHT' | translate }}</label>
+			<input type="text" class="form-control" id="weight" name="username" placeholder="{{'BINSFORLOTINSPECTLOTMODALFORMLABELWEIGHT' | translate }}" data-ng-model="user.weight" data-ng-minlength="3" data-ng-maxlength="10" data-ng-pattern="/^[a-zA-Z0-9]*$/" required />
+			<div data-ng-messages="InspectLotForm.weight.$error" data-ng-show="InspectLotForm.weight.$touched" role="alert" class="bg-danger">
+				<div data-ng-messages-include="formErrorMessages"></div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="grade">{{'BINSFORLOTINSPECTLOTMODALFORMLABELGRADE' | translate }}</label>
+			<select class="form-control" data-ng-model="gradeSelected"></select>
+		</div>
+		<div class="form-group">
+			<label for="defects">{{'BINSFORLOTINSPECTLOTMODALFORMLABELDEFECTS' | translate }}</label>
+			<select class="form-control" disabled="disabled" data-ng-model="defectsSelected"></select>
+		</div>
+		<div class="form-group" data-ng-class="{'has-error':InspectLotForm.color.$touched && InspectLotForm.color.$invalid}">
+			<label for="color">{{'BINSFORLOTINSPECTLOTMODALFORMLABELCOLOR' | translate }}</label>
+			<input minicolors="{{inputColorSettings}}" type="text" class="form-control" id="color" name="color" data-ng-model="user.color" />
+		</div>
+		<button type="submit" class="btn btn-primary btn-lg btn-block" data-ng-click="submit(user)" data-ng-disabled="!InspectLotForm.$valid">{{'BINSFORLOTINSPECTLOTMODALBUTTONSUBMIT' | translate }}</button>
+	</fieldset>
+</form>

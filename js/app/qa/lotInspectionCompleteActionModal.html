@@ -1,0 +1,38 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="modal-body">
+				<div class="row">
+				<div data-ng-include="'js/app/qa/rowDetails.html'"></div>
+				</div>
+				<form name="lotInspectionCompleteForm" role="form" novalidate>
+					<fieldset>
+						<legend>{{'LOTINSPECTIONMODALCOMPLETEFORMLEGEND' | translate }}</legend>
+						<div class="form-group" data-ng-class="{'has-error':lotInspectionCompleteForm.lotid.$touched && lotInspectionCompleteForm.lotid.$invalid}">
+							<label for="lotid">{{'LOTINSPECTIONMODALCOMPLETEFORMLABELLOTID' | translate }}</label>
+				        	<input type="text" class="form-control" id="lotid" name="lotid" data-ng-model="user.lotid" disabled="disabled" />
+						</div>
+						<div class="form-group" data-ng-class="{'has-error':lotInspectionCompleteForm.marketdesignation.$touched && lotInspectionCompleteForm.marketdesignation.$invalid}">
+							<label for="marketdesignation">{{'LOTINSPECTIONMODALCOMPLETEFORMLABELMARKETDESIGNATION' | translate }}</label>
+				        	<select class="form-control" data-ng-model="marketdesignationSelected" name="marketdesignation"></select>
+							<div data-ng-messages="lotInspectionCompleteForm.marketdesignation.$error" data-ng-show="lotInspectionCompleteForm.marketdesignation.$touched" role="alert" class="bg-danger">
+				            	<div data-ng-messages-include="formErrorMessages"></div>
+				        	</div>
+						</div>
+						<div class="form-group" data-ng-class="{'has-error':lotInspectionCompleteForm.comment.$touched && lotInspectionCompleteForm.comment.$invalid}">
+							<label for="comment">{{'LOTINSPECTIONMODALCOMPLETEFORMLABELCOMMENTS' | translate }}</label>
+							<textarea class="form-control" name="comment" id="comment" data-ng-model="user.comment" rows="3" data-ng-minlength="3" required></textarea>
+							<div data-ng-messages="lotInspectionCompleteForm.comment.$error" data-ng-show="lotInspectionCompleteForm.comment.$touched" role="alert" class="bg-danger">
+				            	<div data-ng-messages-include="formErrorMessages"></div>
+				        	</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<div class="modal-footer">
+				 <button type="button" class="btn btn-default btn-lg btn-block" data-ng-click="cancel()" aria-label="close">{{'LOTINSPECTIONMODALCOMPLETEFORMBUTTONCANCEL' | translate }}</button>
+				 <button type="button" class="btn btn-primary btn-lg btn-block" data-ng-click="submit(user)" data-ng-disabled="!lotInspectionCompleteForm.$valid">{{'LOTINSPECTIONMODALCOMPLETEFORMBUTTONSUBMIT' | translate }}</button>
+			</div>
+		<div/>
+	</div>
+</div>

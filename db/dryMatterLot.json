@@ -1,0 +1,22 @@
+{
+	"data":[
+		{
+			"SEQUENCE":"1",
+			"WEIGHTUNIT":"11",
+			"FRUITWEIGHT":"5.00",
+			"PAPERWEIGHT":"6.00",
+			"WETWEIGHT":"78.00",
+			"DRYWEIGHT":"45.00",
+			"DRYMATTER":"34.7"
+		},
+		{
+			"SEQUENCE":"2",
+			"WEIGHTUNIT":"10",
+			"FRUITWEIGHT":"3.00",
+			"PAPERWEIGHT":"4.00",
+			"WETWEIGHT":"6.00",
+			"DRYWEIGHT":"1.99",
+			"DRYMATTER":"54.2"
+		}
+	]
+}

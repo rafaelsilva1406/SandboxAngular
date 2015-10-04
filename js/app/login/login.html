@@ -1,0 +1,31 @@
+<div class="main-content"><div class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12">
+		<form name="loginForm" role="form" novalidate>
+			<fieldset>
+				<legend>{{'LOGINLEGEND' | translate }}</legend>
+				<div class="form-group" data-ng-class="{ 'has-error': loginForm.username.$touched && loginForm.username.$invalid }">
+					<label for="username">{{'LOGINUSERNAME' | translate }}</label>
+				    <input type="text" class="form-control" id="username" name="username" placeholder="{{'LOGINUSERNAME' | translate }}" data-ng-model="user.username" data-ng-minlength="3" data-ng-maxlength="10" data-ng-pattern="/^[a-zA-Z0-9]*$/" required />
+				    <div data-ng-messages="loginForm.username.$error" data-ng-show="loginForm.username.$touched" role="alert" class="bg-danger">
+				   		<div data-ng-messages-include="formErrorMessages"></div>
+				    </div>
+				</div>
+				<div class="form-group" data-ng-class="{ 'has-error': loginForm.password.$touched && loginForm.password.$invalid }">
+					<label for="password">{{'LOGINPASSWORD' | translate }}</label>
+				    <input type="password" class="form-control" id="password" name="password" placeholder="{{'LOGINPASSWORD' | translate }}" data-ng-model="user.password" data-ng-minlength="3" data-ng-maxlength="10" data-ng-pattern="/^[a-zA-Z0-9]*$/" required />
+				    <div data-ng-messages="loginForm.password.$error" data-ng-show="loginForm.password.$touched" role="alert" class="bg-danger">
+				    	<div data-ng-messages-include="formErrorMessages"></div>
+				    </div>
+				</div>
+				<div class="form-group">
+					<label for="domain">{{'LOGINDOMAIN' | translate }}</label>
+				    <select class="form-control" disabled="disabled" data-ng-model="domainSelected" data-ng-options="item.name for item in domainList track by item.id"></select>
+				</div>
+				<div class="form-actions">
+				    <button type="submit" title="Login" class="btn btn-default btn-lg btn-block" data-ng-click="submit(user)" data-ng-disabled="!loginForm.$valid"><span>{{'LOGINSUBMIT' | translate }}</span></button>
+				    <div data-ng-show="progress.active()"></div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div></div>

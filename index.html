@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en-US">
+        <title>MissionPro ERP</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="Mission Produce ERP App.">
+        <meta name="keywords" content="Mission Produce, ERP">
+        <meta name="author" content="Mission Produce Inc.">
+        <link rel="icon" href="img/favicon.ico">
+        <link href="css/libs/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+        <link href="css/libs/bootstrap-theme.min.css" rel="stylesheet" type="text/css" media="all">
+        <link href="css/libs/datatables.bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+        <link href="css/libs/loading-bar.min.css" rel="stylesheet" type="text/css" media="all">
+        <link href="css/libs/jquery.minicolors.css" rel="stylesheet" type="text/css" media="all">
+        <link href="css/libs/malhar-angular-dashboard.css" rel="stylesheet" type="text/css" media="all">
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    </head>
+    <body>
+    <section data-ui-view="header"></section>
+    <section class="container-fluid" data-ui-view="full"></section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-md-2 col-lg-2">
+                <section data-ui-view="nav"></section>
+            </div>
+            <div class="col-sm-6 col-md-10 col-lg-10">
+                <section data-ui-view></section>
+            </div>
+        </div>
+    </div>
+    <section data-ui-view="footer"></section>
+    <script src="js/components/require.js"></script>
+    <script>
+      require(['require', 'js/app/main'], function (require, main) {
+    	  window.require.config(main);
+    	  require(['js/app/bootstrap.js']);
+      });
+    </script>
+    </body>
+</html>

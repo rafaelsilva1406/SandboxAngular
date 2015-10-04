@@ -1,0 +1,46 @@
+<form name="addDryMatterForm" role="form" novalidate>
+	<fieldset>
+		<legend>{{'DRYMATTERFORMADDLEGEND' | translate }}</legend>
+		<div class="form-group" data-ng-class="{'has-error':addDryMatterForm.lotid.$touched && addDryMatterForm.lotid.$invalid}">
+			<label for="lotid">{{'DRYMATTERFORMADDLABELLOTID' | translate }}</label>
+			<input type="text" class="form-control" id="lotid" name="lotid" data-ng-model="user.lotid" disabled="disabled" />
+		</div>
+		<div class="form-group" data-ng-class="{'has-error':addDryMatterForm.sequence.$touched && addDryMatterForm.sequence.$invalid}">
+			<label for="sequence">{{'DRYMATTERFORMADDLABELSEQUENCE' | translate }}</label>
+			<input type="text" class="form-control" id="sequence" name="sequence" data-ng-model="user.sequence" disabled="disabled" />
+		</div>
+		<div class="form-group" data-ng-class="{'has-error':addDryMatterForm.weightunit.$touched && addDryMatterForm.weightunit.$invalid}">
+			<label for="weightunit">{{'DRYMATTERFORMADDLABELWEIGHTUNIT' | translate }}</label>
+			<select class="form-control" data-ng-model="weightunitSelected" name="weightunit" disabled="disabled"></select>
+		</div>
+		<div class="form-group" data-ng-class="{ 'has-error': addDryMatterForm.fruitweight.$touched && addDryMatterForm.fruitweight.$invalid }">
+			<label for="fruitweight">{{'DRYMATTERFORMADDLABELFRUITWEIGHT' | translate }}</label>
+			<input type="text" class="form-control" id="fruitweight" name="fruitweight" placeholder="{{'DRYMATTERFORMADDLABELFRUITWEIGHT' | translate }}" data-ng-model="user.fruitweight" data-ng-minlength="3" data-ng-maxlength="10" data-ng-pattern="/^[a-zA-Z0-9]*$/" required />
+			<div data-ng-messages="addDryMatterForm.fruitweight.$error" data-ng-show="addDryMatterForm.fruitweight.$touched" role="alert" class="bg-danger">
+				<div data-ng-messages-include="formErrorMessages"></div>
+			</div>
+		</div>
+		<div class="form-group" data-ng-class="{ 'has-error': addDryMatterForm.paperweight.$touched && addDryMatterForm.paperweight.$invalid }">
+			<label for="paperweight">{{'DRYMATTERFORMADDLABELPAPERWEIGHT' | translate }}</label>
+			<input type="text" class="form-control" id="paperweight" name="paperweight" placeholder="{{'DRYMATTERFORMADDLABELPAPERWEIGHT' | translate }}" data-ng-model="user.paperweight" data-ng-minlength="3" data-ng-maxlength="10" data-ng-pattern="/^[a-zA-Z0-9]*$/" required />
+			<div data-ng-messages="addDryMatterForm.paperweight.$error" data-ng-show="addDryMatterForm.paperweight.$touched" role="alert" class="bg-danger">
+				<div data-ng-messages-include="formErrorMessages"></div>
+			</div>
+		</div>
+		<div class="form-group" data-ng-class="{ 'has-error': addDryMatterForm.wetweight.$touched && addDryMatterForm.wetweight.$invalid }">
+			<label for="wetweight">{{'DRYMATTERFORMADDLABELWETWEIGHT' | translate }}</label>
+			<input type="text" class="form-control" id="wetweight" name="wetweight" placeholder="{{'DRYMATTERFORMADDLABELWETWEIGHT' | translate }}" data-ng-model="user.wetweight" data-ng-minlength="3" data-ng-maxlength="10" data-ng-pattern="/^[a-zA-Z0-9]*$/" required />
+			<div data-ng-messages="addDryMatterForm.wetweight.$error" data-ng-show="addDryMatterForm.wetweight.$touched" role="alert" class="bg-danger">
+				<div data-ng-messages-include="formErrorMessages"></div>
+			</div>
+		</div>
+		<div class="form-group" data-ng-class="{ 'has-error': addDryMatterForm.dryweight.$touched && addDryMatterForm.dryweight.$invalid }">
+			<label for="dryweight">{{'DRYMATTERFORMADDLABELDRYWEIGHT' | translate }}</label>
+			<input type="text" class="form-control" id="dryweight" name="dryweight" placeholder="{{'DRYMATTERFORMADDLABELDRYWEIGHT' | translate }}" data-ng-model="user.dryweight" data-ng-minlength="3" data-ng-maxlength="10" data-ng-pattern="/^[a-zA-Z0-9]*$/" required />
+			<div data-ng-messages="addDryMatterForm.dryweight.$error" data-ng-show="addDryMatterForm.dryweight.$touched" role="alert" class="bg-danger">
+				<div data-ng-messages-include="formErrorMessages"></div>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary btn-lg btn-block" data-ng-click="submit(user)" data-ng-disabled="!lotInspectionCompleteForm.$valid">{{'DRYMATTERFORMADDBUTTONSUBMIT' | translate }}</button>
+	</fieldset>
+</form>
